@@ -1,0 +1,20 @@
+{
+  "name": "trading-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@binance/connector": "^2.0.0",
+    "node-telegram-bot-api": "^0.61.0",
+    "nodemon": "^2.0.20",
+    "ws": "^8.12.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
