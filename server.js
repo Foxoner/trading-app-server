@@ -56,7 +56,7 @@ bot.on('message', async msg => {
 // Main Logic
 
 const megaScan = () => {
-	// console.time('scan')
+
 	client.ticker24hr().then(response => {
 		const bd = JSON.parse(fs.readFileSync('config.json'))
 
@@ -122,7 +122,10 @@ setInterval(async () => {
 			bot.sendMessage(user, `Here is some new coins ${String.fromCodePoint(128181)}`, genareteCoinBtnList(Array.from(difCoins)))
 		})
 	} catch (error) {
+		const logs = JSON.parse(fs.readFileSync('logs.json')).logs
 		console.log(error)
+		logs.push(error)
+		fs.writeFileSync('logs.json', JSON.stringify({logs: logs}))
 		await megaScan()
 	}
 }, 8000)
