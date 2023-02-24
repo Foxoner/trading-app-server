@@ -131,7 +131,7 @@ setInterval(async () => {
 // WS Connection
 
 const wss = new ws.Server({
-  port: 8000
+  port: process.env.PORT || 8000
 }, () => console.log('Server started on port 8000'))
 
 wss.on('connection', function connection(ws) {
