@@ -108,7 +108,9 @@ const megaScan = () => {
 		modernCoins = new Set(JSON.parse(fs.readFileSync('config.json')).data.coins.map(item => item.symbol))
 		difCoins = new Set([...modernCoins].filter(coin => !oldCoins.has(coin)));
 
-    } )
+    })
+	.catch(e => console.log(e))
+	
 }
 
 // -----------
