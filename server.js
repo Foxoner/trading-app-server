@@ -16,7 +16,7 @@ let difCoins = new Set()
 
 const token = '6088134057:AAHpW-lCRqNKOd-sQVO2psxFnoSiWuAvYmo';
 const bot = new TelegramApi(token, {polling: true});
-const chatId = 346449084;
+
 
 const genareteCoinBtn = (coin) => {
 	return [{text: `${coin}`, url: `https://www.binance.com/uk-UA/trade/${coin}_BUSD?theme=dark&type=spot`}]
