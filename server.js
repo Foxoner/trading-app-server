@@ -4,8 +4,8 @@ const { Spot } = require('@binance/connector');
 const TelegramApi = require('node-telegram-bot-api');
 
 
-const apiKey = 'j4ACWnDMhLTK1hLDwNNIak1rKxVOS73TmbdWy9JLlukvKgRKxKpqsZehBtnkqnHD'
-const apiSecret = 'JFiHtocO1v2oKwNMLl2D7zQHb51UFzTltkqGHTaveKaIZNGhZfdXcDuwwWmbQPMl'
+const apiKey = '1eN9kYK5CoLQIJL6nB2vJocKVOFl7cYe335jcyiMievJSgGiKUTAUuvKbMW16bhN'
+const apiSecret = 'bIND8zVT123ss72ITAEjhJCpqS8l6GCmrxyDuYOOWvjxXFZd6SxXGkIWqHubV5mK'
 const client = new Spot(apiKey, apiSecret)
 
 let oldCoins = new Set()
@@ -131,7 +131,7 @@ setInterval(async () => {
 // WS Connection
 
 const wss = new ws.Server({
-  port: process.env.PORT || 8000
+	port: process.env.PORT || 8000
 }, () => console.log('Server started on port 8000'))
 
 wss.on('connection', function connection(ws) {
