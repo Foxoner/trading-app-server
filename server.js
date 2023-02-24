@@ -119,16 +119,14 @@ setInterval(async () => {
 	try {
 		await megaScan()
 		const users = JSON.parse(fs.readFileSync('users.json')).users
-		console.log(difCoins)
 		Array.from(difCoins).length && users.length && users.forEach(user => {
 			bot.sendMessage(user, `Here is some new coins ${String.fromCodePoint(128181)}`, genareteCoinBtnList(Array.from(difCoins)))
 		})
 	} catch (error) {
 		const logs = JSON.parse(fs.readFileSync('logs.json')).logs
-		console.log(error)
 		logs.push(error)
 		fs.writeFileSync('logs.json', JSON.stringify({logs: logs}))
-		await megaScan()
+
 	}
 }, 8000)
 
