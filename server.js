@@ -4,8 +4,8 @@ const { Spot } = require('@binance/connector');
 const TelegramApi = require('node-telegram-bot-api');
 
 
-const apiKey = '1eN9kYK5CoLQIJL6nB2vJocKVOFl7cYe335jcyiMievJSgGiKUTAUuvKbMW16bhN'
-const apiSecret = 'bIND8zVT123ss72ITAEjhJCpqS8l6GCmrxyDuYOOWvjxXFZd6SxXGkIWqHubV5mK'
+const apiKey = 'YOUR KEY'
+const apiSecret = 'YOUR SECRET'
 const client = new Spot(apiKey, apiSecret)
 
 let oldCoins = new Set()
@@ -14,7 +14,7 @@ let difCoins = new Set()
 
 // Telegram connection
 
-const token = '6088134057:AAHpW-lCRqNKOd-sQVO2psxFnoSiWuAvYmo';
+const token = 'YOUR TOKEN';
 const bot = new TelegramApi(token, {polling: true});
 
 
